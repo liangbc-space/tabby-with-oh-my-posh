@@ -23,7 +23,7 @@ brew install jandedobbeleer/oh-my-posh/oh-my-posh
 mkdir -p ~/.poshthemes
 ```
 
-#### 将本仓库中的 [`agnosterplus.omp.json`](agnosterplus.omp.json)文件内容复制到本地：
+#### 将本仓库中的 [agnosterplus.omp.json](agnosterplus.omp.json)文件内容复制到本地：
 
 ```text
 ~/.poshthemes/agnosterplus.omp.json
@@ -64,7 +64,7 @@ git clone https://github.com/Aloxaf/fzf-tab ~/.plugin.zsh/fzf-tab
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.plugin.zsh/fast-syntax-highlighting
 ```
 
-### 8. 安装 `common-aliases` 插件
+### 8. 安装 [common-aliases](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh) 插件
 
 ```bash
 mkdir -p ~/.plugin.zsh/common-aliases
@@ -73,7 +73,7 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/comm
 
 ### 9. 配置 ~/.zshrc
 
-##### 使用本仓库中的 [`.zshrc`](.zshrc) 文件内容覆盖到你本地配置文件的首行：
+##### 使用本仓库中的 [.zshrc](.zshrc) 文件内容覆盖到你本地配置文件的首行：
 
 ```text
 vim ~/.zshrc
