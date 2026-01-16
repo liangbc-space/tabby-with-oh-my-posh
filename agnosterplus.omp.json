@@ -1,0 +1,75 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "rprompt",
+            "segments": [
+                {
+                    "foreground": "#007ACC",
+                    "properties": {
+                        "time_format": "15:04:05"
+                    },
+                    "style": "plain",
+                    "template": " {{ .CurrentDate | date .Format }} ",
+                    "type": "time"
+                }
+            ]
+        },
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "powerline",
+                    "background": "#1e3a5f",
+                    "foreground_templates": [
+                        "{{ if eq .Code 0 }}#00ff00{{ else }}#ff0000{{ end }}"
+                    ],
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "template": "{{ if eq .Code 0 }}👍 {{ else }}✘ {{ end }}"
+                },
+                {
+                    "background": "#007ACC",
+                    "foreground": "#100e23",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "template": " {{ .UserName }} ",
+                    "type": "session"
+                },
+                {
+                    "background": "#61AFEE",
+                    "foreground": "#100e23",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "folder_icon": "\uf115",
+                        "folder_separator_icon": " \ue0b1 ",
+                        "home_icon": "\ueb06",
+                        "style": "agnoster"
+                    },
+                    "style": "powerline",
+                    "template": " {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "background": "#89CA79",
+                    "foreground": "#193549",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "background_templates": [
+                        "{{ if or (.Working.Changed) (.Staging.Changed) }}#F3AE35{{ end }}"
+                    ],
+                    "template": " {{ .HEAD }}{{ if .Working.Changed }} ✘{{ end }}{{ if .Staging.Changed }} ✚{{ end }}{{ if gt .Ahead 0 }} ↑{{ end }}{{ if gt .Behind 0 }} ↓{{ end }} ",
+                    "type": "git",
+                    "properties": {
+                        "fetch_status": true
+                    }
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "final_space": true,
+    "version": 3
+}
