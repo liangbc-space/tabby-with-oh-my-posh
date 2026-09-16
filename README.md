@@ -14,7 +14,7 @@
 ### 1. 安装 `oh-my-posh`
 
 ```bash
-brew install jandedobbeleer/oh-my-posh/oh-my-posh
+brew install --cask jandedobbeleer/oh-my-posh/oh-my-posh
 ```
 
 ### 2. 配置 Oh My Posh 主题
